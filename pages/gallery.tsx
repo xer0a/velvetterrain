@@ -4,7 +4,7 @@ import { NextPage } from "next";
 const Gallery: NextPage = () => {
   return (
     <Layout>
-      <div>About us</div>
+      <div>Gallery</div>
     </Layout>
   );
 };
