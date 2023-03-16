@@ -39,7 +39,7 @@ export const Header = () => {
       <Head>
         <title>Velvet Terrain | Welcome</title>
       </Head>
-      <div className="bg-black sticky top-0 flex justify-between p-6 text-[#f0e4cc] items-center">
+      <div className="bg-black sticky z-10 top-0 flex justify-between p-6 text-[#f0e4cc] items-center">
         <div className="flex justify-evenly items-center max-w-2xl w-full">
           <Image
             src="/images/velvet-terrain.png"
@@ -47,7 +47,7 @@ export const Header = () => {
             width={100}
             height={100}
           />
-          <ul className="flex gap-4 p-4">
+          <ul className="hidden md:flex gap-4 p-4 ">
             {navigationItems.map((item: INavItem) => (
               <Link key={item.href} href={item.href}>
                 <p className="transition-all duration-450 ease-in-out border-t-0 hover:border-b-2">
