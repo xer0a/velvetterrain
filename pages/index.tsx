@@ -1,3 +1,5 @@
+import { Header } from "@/components/Header";
+import { LandingBanner } from "@/components/LandingBanner";
 import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { NextPage } from "next";
@@ -57,15 +59,19 @@ const mockProductGrid = [
 
 const LandingPage: NextPage = () => {
   return (
-    <Layout>
-      <div className="flex h-full justify-center items-center">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 p-4">
-          {mockProductGrid.map((product) => (
-            <ProductCard key={product.name} product={product} />
-          ))}
+    <>
+      <Header />
+      <LandingBanner />
+      <Layout>
+        <div className="flex h-full justify-center items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 p-4">
+            {mockProductGrid.map((product) => (
+              <ProductCard key={product.name} product={product} />
+            ))}
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

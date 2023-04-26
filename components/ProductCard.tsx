@@ -4,8 +4,8 @@ import Image from "next/image";
 export const ProductCard = ({ product }: { product: ProductInfo }) => {
   return (
     <>
-      <div className="border bg-slate-700 w-72 h-72 flex flex-col justify-center items-center space-y-4 text-white">
-        <div className="relative w-20 h-20">
+      <div className="border bg-black w-72 h-72 rounded-xl flex flex-col justify-center items-center space-y-4 text-white">
+        <div className="relative w-20 h-20 opacity">
           {product.image && (
             <Image
               alt="todo make dynamic"
