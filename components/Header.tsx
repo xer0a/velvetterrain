@@ -12,10 +12,6 @@ interface INavItem {
 
 const navigationItems: INavItem[] = [
   {
-    name: "Products",
-    href: "/",
-  },
-  {
     name: "Gallery",
     href: "/gallery",
   },
@@ -51,10 +47,10 @@ export const Header = () => {
             width={100}
             height={100}
           />
-          <ul className="hidden md:flex gap-4 p-4 ">
+          <ul className="hidden md:flex gap-4 p-4 text-2xl">
             {navigationItems.map((item: INavItem) => (
               <Link key={item.href} href={item.href}>
-                <p className="transition-all uppercase duration-450 ease-in-out border-t-0 hover:border-b-2">
+                <p className="transition-all duration-450 ease-in-out border-t-0 hover:border-b-2">
                   {item.name}
                 </p>
               </Link>
