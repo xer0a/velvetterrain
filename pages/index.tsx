@@ -1,3 +1,4 @@
+// import { Header } from "@/components/Header";
 import { Header } from "@/components/Header";
 import { LandingBanner } from "@/components/LandingBanner";
 import { Layout } from "@/components/Layout";
@@ -60,11 +61,16 @@ const mockProductGrid = [
 const LandingPage: NextPage = () => {
   return (
     <>
-      <Header />
-      <LandingBanner />
+      <div className="sticky top-0 w-full">
+        <Header />
+      </div>
+      <div className="absolute h-96 w-full top-0">
+        <LandingBanner />
+      </div>
+
       <Layout>
         <div className="flex h-full justify-center items-center">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 p-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:p-4">
             {mockProductGrid.map((product) => (
               <ProductCard key={product.name} product={product} />
             ))}

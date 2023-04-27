@@ -11,7 +11,7 @@ const font = Kaisei_Tokumin({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${font.className}`}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </main>
   );
 }

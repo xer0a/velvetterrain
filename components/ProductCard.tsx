@@ -4,7 +4,7 @@ import Image from "next/image";
 export const ProductCard = ({ product }: { product: ProductInfo }) => {
   return (
     <>
-      <div className="border bg-black w-72 h-72 rounded-xl flex flex-col justify-center items-center space-y-4 text-white">
+      <div className="border bg-black w-64 h-64 rounded-xl flex flex-col justify-center items-center space-y-4 text-white">
         <div className="relative w-20 h-20 opacity">
           {product.image && (
             <Image

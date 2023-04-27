@@ -1,6 +1,3 @@
-import { Header } from "./Header";
-import { LandingBanner } from "./LandingBanner";
-
 export const Layout = ({
   children,
   maxWidth = true,
