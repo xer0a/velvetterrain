@@ -1,13 +1,22 @@
+import { Header } from "./Header";
+import clsx from "clsx";
+
 export const Layout = ({
   children,
-  maxWidth = true,
+  bgColor,
 }: {
   children: any;
-  maxWidth?: boolean;
+  bgColor: "green" | "pearl";
 }) => {
   return (
     <>
-      <main className="w-full z-1 primary-background min-h-screen mx-auto">
+      <Header />
+      <main
+        className={clsx(
+          bgColor === "green" && "bg-green",
+          "bg-pearl w-full z-1 min-h-screen mx-auto"
+        )}
+      >
         <div className="px-4">{children}</div>
       </main>
     </>

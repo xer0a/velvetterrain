@@ -10,10 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      transitionDuration: {
-        450: "450ms",
-        500: "500ms",
-        750: "750ms",
+      colors: {
+        green: "#506c54",
+        "dark-green": "#3B4C3E",
+        pearl: "#F0E4CC",
+        brown: "#251605",
+        orange: "#F2542D",
       },
     },
   },
