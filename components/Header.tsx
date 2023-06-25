@@ -35,6 +35,7 @@ export const Header = () => {
   return (
     <>
       <header className="sticky top-0 left-0 right-0 z-20 bg-green">
+        {/* Mobile menu */}
         <div className="flex justify-between px-2 sm:px-4 md:px-12 py-2 lg:hidden bg-dark-green">
           <div
             className="relative h-16 aspect-square cursor-pointer "
@@ -48,7 +49,7 @@ export const Header = () => {
               className="object-contain"
             />
           </div>
-          <div className="flex flex-wrap gap-x-8 justify-center max-w-[224px] items-center text-lg text-pearl">
+          <div className="flex flex-wrap gap-x-8 justify-center max-w-[150px] items-center text-lg text-pearl">
             {navigationItems.map((item: INavItem) => (
               <Link
                 key={item.href}
@@ -60,7 +61,7 @@ export const Header = () => {
             ))}
           </div>
         </div>
-        {/*  */}
+        {/* Desktop menu */}
         <div className="hidden lg:grid grid-cols-3 py-4 items-center mx-auto">
           <div className="text-pearl mx-auto flex w-80 justify-between border-2 items-center">
             <input

@@ -12,7 +12,7 @@ export interface ProductInfo {
 
 const mockProductGrid = [
   {
-    name: "S.M.O.G Hoodie",
+    name: "Suspension Hoodie",
     image: "/images/smog-hoodie-complete.jpg",
     price: 60,
     href: "#",
@@ -26,7 +26,7 @@ const mockProductGrid = [
     isStocked: true,
   },
   {
-    name: "S.M.O.G Jacket",
+    name: "S.M.O.G Bomber Jacket",
     image: "/images/jacket-hat-front.jpg",
     price: 50,
     href: "#",
@@ -47,7 +47,7 @@ const mockProductGrid = [
     isStocked: true,
   },
   {
-    name: "Blue Oversized Jacket Robe",
+    name: "Sage Coat Denim",
     image: "/images/quinn-full.jpg",
     price: 50,
     href: "#",
@@ -65,8 +65,8 @@ const LandingPage: NextPage = () => {
           content="Velvet Terrain is an apparel & clothing retailer based in Auckland, New Zealand."
         />
       </Head>
-      <Layout bgColor="pearl">
-        <div className="flex h-full justify-center items-center py-20">
+      <Layout>
+        <div className="flex h-full justify-center items-center py-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-20 md:p-4">
             {mockProductGrid.map((product) => (
               <ProductCard key={product.name} product={product} />
