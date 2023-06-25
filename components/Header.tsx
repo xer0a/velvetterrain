@@ -12,10 +12,6 @@ interface INavItem {
 
 const navigationItems: INavItem[] = [
   {
-    name: "Products",
-    href: "/products",
-  },
-  {
     name: "About",
     href: "/about",
   },
