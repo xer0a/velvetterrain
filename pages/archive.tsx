@@ -1,11 +1,14 @@
 import { Layout } from "@/components/Layout";
+import Page from "@/components/page";
 import { NextPage } from "next";
 
 const Archive: NextPage = () => {
   return (
-    <Layout>
-      <div>Archive</div>
-    </Layout>
+    <Page>
+      <Layout>
+        <div>Archive</div>
+      </Layout>
+    </Page>
   );
 };
 

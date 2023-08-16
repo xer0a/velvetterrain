@@ -1,79 +1,69 @@
 import { Layout } from "@/components/Layout";
-import { ProductCard } from "@/components/ProductCard";
 import { NextPage } from "next";
 import Head from "next/head";
-export interface ProductInfo {
-  name: string;
-  image?: string;
-  price: number;
-  href: string;
-  isStocked: boolean;
-}
+import Page from "@/components/page";
+import Image from "next/image";
 
-const mockProductGrid = [
-  {
-    name: "Suspension Hoodie",
-    image: "/images/smog-hoodie-complete.jpg",
-    price: 60,
-    href: "#",
-    isStocked: true,
-  },
-  {
-    name: "Uniform Hat",
-    image: "/images/uniform-hat.jpg",
-    price: 35,
-    href: "#",
-    isStocked: true,
-  },
-  {
-    name: "S.M.O.G Bomber Jacket",
-    image: "/images/jacket-hat-front.jpg",
-    price: 50,
-    href: "#",
-    isStocked: true,
-  },
-  {
-    name: "Black Top",
-    image: "/images/black-top.jpg",
-    price: 15,
-    href: "#",
-    isStocked: true,
-  },
-  {
-    name: "Sash Carry Bag",
-    image: "/images/carry-bag.jpg",
-    price: 35,
-    href: "#",
-    isStocked: true,
-  },
-  {
-    name: "Sage Coat Denim",
-    image: "/images/quinn-full.jpg",
-    price: 50,
-    href: "#",
-    isStocked: true,
-  },
-];
+//we can come back to this soon
+
+// export interface ProductInfo {
+//   name: string;
+//   image?: string;
+//   price: number;
+//   href: string;
+//   isStocked: boolean;
+// }
 
 const LandingPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Velvet Terrain - Home</title>
-        <meta
-          name="description"
-          content="Velvet Terrain is an apparel & clothing retailer based in Auckland, New Zealand."
-        />
-      </Head>
-      <Layout>
-        <div className="flex h-full justify-center items-center py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-20 md:p-4">
-            {mockProductGrid.map((product) => (
-              <ProductCard key={product.name} product={product} />
-            ))}
+      <Page>
+        <Head>
+          <title>Velvet Terrain - Home</title>
+          <meta
+            name="description"
+            content="Velvet Terrain is an apparel & clothing retailer based in Auckland, New Zealand."
+          />
+        </Head>
+        <Layout>
+          <div className="w-full text-center py-10 max-w-xl mx-auto overfl">
+            <h1 className="text-xl uppercase">Welcome to the Velvet Terrain</h1>
+            <br />
+            <p>
+              Every piece in our collection is thoughtfully curated to reflect
+              our commitment to quality and style. From homeware to accessories,
+              all items are meticulously handcrafted with an incredible
+              attention to detail.
+            </p>
+            <br />
+            <p>
+              Velvet Terrain garments embody a sense of exploration and
+              authenticity. Our commitment to this means production may slow
+              down at times, so we thank everyone for their patience and
+              continued support.
+            </p>
+            <br />
+            <p>Theres so much more to come. We hope to see you soon.</p>
+            <br />
+            <p>G. Wright (founder)</p>
+            <br />
+            <p className="italic pb-4">
+              “Fixation is the way to death, fluidity is the way to life”
+            </p>
+            <div className="flex relative aspect-square justify-center items-center mx-auto">
+              <div className="border-2 w-[250px] h-[250px]">
+                <Image
+                  src={"/images/george-squat.png"}
+                  alt={"George in scene"}
+                  fill
+                  priority
+                  className=" rounded-xl"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </Page>
     </>
   );
 };
